@@ -3,9 +3,9 @@ require("dotenv").config();
 const https = require("https");
 const fs = require("fs");
 
-const privateKey = fs.readFileSync("ssl/easternapps_dyndns_org.key", "utf8");
-const certificate = fs.readFileSync("ssl/easternapps_dyndns_org.crt", "utf8");
-const ca = fs.readFileSync("ssl/easternapps_dyndns_org.ca-bundle", "utf8");
+const privateKey = fs.readFileSync("ssl/easternapps_dyndns_org.key");
+const certificate = fs.readFileSync("ssl/easternapps_dyndns_org.crt");
+const ca = fs.readFileSync("ssl/easternapps_dyndns_org.ca-bundle");
 
 const credentials = { key: privateKey, cert: certificate, ca: ca };
 
